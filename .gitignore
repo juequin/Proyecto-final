@@ -1,0 +1,20 @@
+
+# Ejemplos de como utilizar "GitIgnore"
+
+# Ignora unicamente un archivo en especifico:            archivo_a_ignorar.txt
+# Ignora todos los archivos de la misma extension:       *.txt
+# Ignora un directorio completo con su contenido:        carpeta_a_ignorar/
+
+
+
+# Directorio para guardar archivos utiles pero no necesarios para la funcionalidad
+_MaterialExtra/
+
+# Directorio de VS Code que se genera automaticamente en alguna ocasiones   
+.vscode/
+
+# Carpeta de los Node Modules que no debe subirse a GitHub
+node_modules/
+
+# Archivo para guardar informacion sensible
+.env

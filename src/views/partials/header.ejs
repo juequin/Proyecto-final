@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vinculacion con Libreria Font Awesome 6.4.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="header__navbar container">
+            <picture class="header__logo">
+                <a href="/home">
+                    <img src="/images/branding/logo_light_horizontal.svg" alt="Funkoshop Logo">
+                </a>
+            </picture>
+            <ul class="header__menu">
+                    <li class="header__menubtn submenuopen">
+                        <a class="header__menubtn-link chevron" href="/shop">SHOP<iconify-icon class="chevronsize" icon="tabler:chevron-down"></iconify-icon></a>
+                        
+                            <!-- Sub Menu del boton "Shop" -->
+                            <ul class="header__submenu">
+                                <li class="header__submenubtn">
+                                    <a class="header__submenubtn-link" href="/shop/?category=figura">Funkos</a>
+                                </li>
+                                <li class="header__submenubtn">
+                                    <a class="header__submenubtn-link" href="/shop/?category=remera">Remeras</a>
+                                </li>
+                                <li class="header__submenubtn">
+                                    <a class="header__submenubtn-link" href="/shop/?category=llavero">LLaveros</a>
+                                </li>
+                            </ul>                    
+                    
+                    </li>
+                    <li class="header__menubtn">
+                        <a class="header__menubtn-link" href="/contact">CONTACTO</a>
+                    </li>
+                    <li class="header__menubtn">
+                        <a class="header__menubtn-link" href="/auth/login">LOGIN</a>
+                    </li>
+                    <li class="header__menucart">
+                        <!-- Este Icono del carrito NO posee el circulo rojo con el Contador de Items en Carrito -->
+                        <a class="header__menu-itemicon" href="/shop/cart"><img src="/images/icons/cart-icon.svg" alt=""></a>
+                        <!-- Este Icono del carrito SI posee el circulo rojo con el Contador de Items en Carrito -->
+                        <!-- <a class="header__menu-itemicon" href="./cart.html"><img src="../images/icons/cart-icon.svg" alt=""></a><span id="header-cantidad" class="header__menu-itemicon-cant"></span> -->
+                    </li>
+
+            </ul>
+        </nav>
+    </header>

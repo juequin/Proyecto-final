@@ -1,0 +1,61 @@
+<%- include('../partials/header'); -%>
+
+    <main class="container">
+        <!-- Sección 1 - Cart principal -->
+
+        <% if (dataRecibidaItem && dataRecibidaItem.length > 0) { %>
+            
+            <% dataRecibidaItem.forEach(productoRecibido => { %>
+        
+                <section class="collection container">
+                    <picture class="collection__cover">
+                        <img src="<%= productoRecibido.prod_imagen_frontal %>" alt="<%= productoRecibido.prod_nombre %>">
+                    </picture>
+                    <article class="collection__content">
+                        <p class="collection__text__superior"><%= productoRecibido.prod_licencia %></p>
+                        <h3 class="collection__title"><%= productoRecibido.prod_nombre %></h3>
+                        <p class="collection__text"><%= productoRecibido.prod_descripcion %></p>
+                        <p class="collection__price">$&nbsp;<%= productoRecibido.prod_precio %></p>
+                        <form class="collection__form" action="/shop/item/<%= productoRecibido.prod_id %>/add" method="POST">
+                            <input class="collection__input" name="quantity" id="quantity" value="1" type="text" inputmode="numeric" >
+                            <div class="collection__form__buttons">
+                                <!-- <iconify-icon icon="ic:sharp-add-box" style="color: #4f4f4f;" width="16" height="18" flip="horizontal,vertical"></iconify-icon> -->
+                                <button id="add" class="item__quantity" type="button">+</button>
+                                <!-- <iconify-icon icon="material-symbols:chips-sharp" style="color: #4f4f4f;" width="16" height="18" flip="horizontal,vertical"></iconify-icon> -->
+                                <button id="subtract" class="item__quantity" type="button">-</button>
+                            </div>
+                            <button class="collection__button" type="submit">Agregar al carrito</button>
+                        </form>
+                        <p class="collection__text__inferior">
+                            <a class="collection__link_pago" href="#">Ver métodos de pago</a> - <%= productoRecibido.prod_cuotas %> <% if (productoRecibido.prod_intereses == true){ %> CUOTAS CON INTERÉS <% } else { %> CUOTAS SIN INTERÉS  <% } %>
+                        </p>
+                    </article>
+                </section>
+        
+            <% }) %>
+
+        <% } else { %>
+            <section class="alert alert-warning alert-dismissible fade show aviso" role="alert">
+                <iconify-icon icon="mdi:error-outline" width="70" height="70"></iconify-icon>El ID de producto solicitado No Existe
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </section> 
+        <% } %>
+
+
+        <!-- Sección 2 - Productos relacionados -->
+        <!-- Slider -->
+        <%- include('../components/slider'); -%>
+
+    </main>
+
+
+<%- include('../partials/footer'); -%>
+
+
+    <!-- Vinculacion con Libreria Iconify 1.0.7 -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></Script>
+    <script src="/js/item.js"></script>
+</body>
+
+</html>

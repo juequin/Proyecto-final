@@ -1,0 +1,84 @@
+<%- include('../partials/header'); -%>
+
+    <!-- Seccion Banner -->
+    <section class="banner__container">
+            <div class="banner__bgfilter">
+                <div class="banner__contenido container">
+                    <h3 class="banner__title">Nuevos Ingresos</h3>
+                    <p class="banner__text"> Descubrí el próximo Funko Pop de tu colección</p>
+                    <a class="banner__button" href="/shop/?newProducts">SHOP</a>
+                </div>             
+            </div>
+    </section>
+
+    <!-- Comienzo Pagina Principal -->
+    <main class="container homecontainer">
+        
+        <!-- Colecciones -->
+        <section  id="articles__container" class="articles__container">
+
+            <% dataRecibidaColecciones.forEach(coleccionRecibida => { %>
+
+                <article class="article__item">
+                    <div class="article__details">
+                        <h2 class="article__detailstitle"><%= coleccionRecibida.collection_name %></h2>
+                        <p class="article__detailstext"><%= coleccionRecibida.collection_descript %></p>
+                        <a class="article__detailsbutton" href="/shop/?license=<%= coleccionRecibida.collection_license %>">VER COLECCIÓN</a>
+                    </div>
+                    <picture class="article__image">
+                        <img src="<%= coleccionRecibida.collection_image %>" alt="<%= coleccionRecibida.collection_altimage %>">
+                    </picture>
+                </article>
+        
+            <% }) %>
+<!--
+
+    TODA ESTA INFORMACION ESTATICA DE LAS COLECCIONES AHORA LA GENERA EJS DINAMICAMENTE RECIBIENDO DATA DEL BACKEND  <------------------------------
+
+            <article class="article__item">
+                <div class="article__details">
+                    <h2 class="article__detailstitle">STAR WARS & THE MANDALORIAN</h2>
+                    <p class="article__detailstext">Disfruta de una saga que sigue agregando personajes a su colección.</p>
+                    <a class="article__detailsbutton" href="#">VER COLECCIÓN</a>
+                </div>
+                <picture class="article__image">
+                    <img src="../images/star-wars/baby-yoda-1.webp" alt="Producto Baby Yoda">
+                </picture>
+            </article>
+
+            <article class="article__item">
+                <div class="article__details">
+                    <h2 class="article__detailstitle">POKEMON INDIGO</h2>
+                    <p class="article__detailstext">Atrapa todos los que puedas y disfruta de una colección llena de amigos.</p>
+                    <a class="article__detailsbutton" href="#">VER COLECCIÓN</a>
+                </div>
+                <picture class="article__image">
+                    <img src="../images/pokemon/vulpix-1.webp" alt="Producto Vulpix">
+                </picture>
+            </article>
+
+            <article class="article__item">
+                <div class="article__details">
+                    <h2 class="article__detailstitle">HARRY POTTER</h2>
+                    <p class="article__detailstext">Revive los recuerdos de una saga llena de magia y encanto.</p>
+                    <a class="article__detailsbutton" href="#">VER COLECCIÓN</a>
+                </div>
+                <picture class="article__image">
+                    <img src="../images/harry-potter/snape-patronus-1.webp" alt="Producto Snape Patronus">
+                </picture>
+            </article>
+-->            
+        </section>
+
+    <!-- Slider -->
+    <%- include('../components/slider'); -%>
+
+    </main>
+    
+    <%- include('../partials/footer'); -%>
+    
+    <!-- Vinculacion con Libreria Iconify 1.0.7 -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    
+</body>
+</html>

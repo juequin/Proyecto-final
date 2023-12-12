@@ -1,0 +1,179 @@
+/* - - - - - - - - - - - - - - - - - - -  INICIO DEL CSS PARA LA SECCION HOME - - - - - - - - - - - - - - - - - - -  */
+
+/* INICIO BANNER */
+
+.banner__container{
+    background-image: url(../../images/funkos-banner.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner__bgfilter{
+    backdrop-filter: blur(3px);
+    backdrop-filter: brightness(0.5);
+}
+
+.banner__contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: calc(var(--spacing-128) * 0.4);  
+    transition: padding 1s ease-in-out;
+}
+
+@media screen and (min-width: 1201px){
+    .banner__contenido{
+        padding: calc(var(--spacing-128) * 0.9) 0px;  
+    }
+}
+
+.banner__title{
+    color: var(--light-color-solid);
+    font-family: var(--alternative-font);
+    font-size: var(--font-jumbo);
+    font-weight: 700;
+}
+
+.banner__text{
+    color: var(--light-color-solid);
+    font-family: var(--alternative-font);
+    font-size: var(--font-medium);
+    font-weight: 400;
+    margin-top: var(--spacing-8);
+    margin-bottom: var(--spacing-36);  /* Este Margen segun figma es 48px pero puse spacing de 36px */
+}
+
+.banner__button{
+    color: var(--dark-color-solid);
+    font-family: var(--primary-font);
+    font-size: var(--font-inter);
+    font-weight: 500;
+    background-color: var(--light-color-solid);
+    padding: var(--spacing-12) var(--spacing-68);
+    border-radius: 50px;
+    transition: all .3s ease-in-out;
+}
+
+.banner__button:hover{
+    background-color: var(--primary-color-solid);
+    color: var(--light-color-solid);
+}
+
+/* FIN BANNER */
+
+
+
+
+/* INICIO ARTICULOS */
+
+.homecontainer{
+    padding: 0px;
+}
+
+.articles__container{
+  padding-top: var(--spacing-68);
+}
+
+.article__item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Ordena en forma "invertida" los hijos pares del "articles_container" */
+/* cambia de posicion solamente el contenedor de la imagen */
+.articles__container :nth-child(even){
+    .article__image{
+        order: -1;
+    }
+}
+
+.article__details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-28);
+    align-items: start;
+}
+
+.article__detailstitle{
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    color: var(--dark-color-solid);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 1s ease-in-out;
+}
+
+.article__detailstext{
+    font-family: var(--alternative-font);
+    font-size: var(--font-large);
+    color: var(--dark-color-solid);
+    font-weight: 400;
+    padding-bottom: var(--spacing-28);
+    border-bottom: solid 3px var(--primary-color-solid);
+    transition: all 1s ease-in-out;
+}
+
+.article__detailsbutton{
+    padding: var(--spacing-18) var(--spacing-36);
+    border-radius: 50px;
+    background: var(--dark-bg-color-solid);
+    font-family: var(--primary-font);
+    font-size: var(--font-large);
+    color: var(--light-color-solid);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    transition: font-size 1s ease-in-out;
+    
+}
+
+.article__detailsbutton:hover{
+    background-color: var(--primary-color-solid);
+    color: var(--light-color-solid);
+}
+
+.article__image{
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+}
+
+
+/* Ajustamos los espaciados pantallas chicas */
+@media screen and (max-width: 1200px){
+    .homecontainer{
+        padding: 0px var(--spacing-24);
+    }
+
+    .articles__container{
+        padding-top: var(--spacing-36);
+        padding-bottom: var(--spacing-36);
+      }
+    
+      .article__item{
+        padding: var(--spacing-36) 0px;
+    }
+}
+
+/* Reducimos el tamaño de fuente en pantallas chicas */
+@media screen and (max-width: 800px) {
+    .article__details{
+        gap: calc(var(--spacing-28) * 0.7);
+    }
+
+    .article__details .article__detailstitle {
+        font-size: calc(var(--font-display) * 0.7);
+    }
+
+    .article__details .article__detailstext {
+        font-size: calc(var(--font-large) * 0.7);
+    }
+
+    .article__details .article__detailsbutton {
+        font-size: calc(var(--font-medium) * 0.8);
+    }
+}
+/* FIN ARTICULOS */
+
+/* - - - - - - - - - - - - - - - - - - -  FINAL DEL CSS PARA LA SECCION HOME - - - - - - - - - - - - - - - - - - -  */

@@ -1,0 +1,24 @@
+{
+  "name": "4---challengeintegrador-m4",
+  "version": "1.0.0",
+  "description": "En este espacio desarrollaremos nuestro Pproyecto Integrador para el curso de NodeJS del Programa Codo a Codo 4.0. que nos permitira consolidar el proceso de aprendizaje de los temas que veremos a lo largo de la cursada a través de la práctica con un fin común y particular.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node index.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "method-override": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

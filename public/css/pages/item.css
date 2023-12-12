@@ -1,0 +1,100 @@
+/* - - - - - - - - - - - - - - - - - - -  INICIO DEL CSS PARA LA SECCION ITEM - - - - - - - - - - - - - - - - - - -  */
+
+.collection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.collection__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+}
+
+.collection__text__superior {
+    font-family: var(--primary-font);
+    font-size: var(--font-small);
+    font-weight: 500;
+    color: var(--dark-color-800);
+}
+
+.collection__title {
+    font-family: var(--primary-font);
+    font-size: var(--font-jumbo);
+    font-weight: 700;
+    color: var(--dark-color-solid);
+}
+
+.collection__text {
+    font-family: var(--primary-font);
+    font-size: var(--font-large);
+    font-weight: 400;
+}
+
+.collection__text__inferior {
+    font-family: var(--primary-font);
+    font-size: var(--font-xsmall);
+    font-weight: 700;
+    color: var(--secondary-color-900);
+}
+
+.collection__link_pago {
+    display: inline-block;
+    text-decoration-line: underline;
+}
+
+.collection__price {
+    font-family: var(--primary-font);
+    font-size: var(--font-jumbo);
+    font-weight: 400;
+}
+
+.collection__form {
+    display: flex;
+}
+
+.collection__input {
+    flex-shrink: 0;
+    width: 107px;
+    height: 37px;
+    stroke: var(--light-color-300);
+    text-align: center;
+    font-size: var(--font-large);
+}
+
+.collection__form__buttons {
+
+    /* gap:4px; */
+    margin-left: 8.79px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.item__quantity {
+    font-size: 1.4em;
+    height: 16px;
+    width: 18px;
+    flex-shrink: 0;
+    background-color: #4f4f4f;
+    border: 0;
+    color: var(--light-color-900);
+
+}
+
+.collection__button {
+    color: var(--light-color-solid);
+    font-family: var(--primary-font);
+    font-size: var(--font-medium);
+    font-weight: 400;
+    padding: 8px 15px;
+    border: 0;
+    flex-shrink: 0;
+    margin-left: 30px;
+    width: 181px;
+    height: 37.91px;
+    background-color: var(--primary-color-solid);
+}
+
+/* - - - - - - - - - - - - - - - - - - -  FINAL DEL CSS PARA LA SECCION ITEM - - - - - - - - - - - - - - - - - - -  */
